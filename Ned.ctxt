@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Ned()
+comment1.params=world
+comment1.target=void\ addedToWorld(greenfoot.World)
+comment2.params=
+comment2.target=void\ useDefaultOrientation()
+comment3.params=
+comment3.target=void\ useFlippedOrientation()
+comment4.params=
+comment4.target=boolean\ isPunching()
+comment5.params=
+comment5.target=void\ act()
+comment5.text=\n\ Act\ -\ do\ whatever\ the\ Ned\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment6.params=
+comment6.target=void\ reset()
+numComments=7

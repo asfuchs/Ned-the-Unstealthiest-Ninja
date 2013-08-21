@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ScrollingActor()
+comment1.params=basename\ suffix\ noOfImages\ delay
+comment1.target=ScrollingActor(java.lang.String,\ java.lang.String,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ CollisionObject\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=3

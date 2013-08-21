@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PhysicsActor()
+comment1.params=basename\ suffix\ noOfImages\ delay
+comment1.target=PhysicsActor(java.lang.String,\ java.lang.String,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ -\ do\ whatever\ the\ PhysicsObject\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment3.params=other
+comment3.target=boolean\ isDirectlyOver(greenfoot.Actor)
+comment4.params=x1\ y1\ w1\ h1\ x2\ y2\ w2\ h2
+comment4.target=int\ getCoverType(int,\ int,\ int,\ int,\ int,\ int,\ int,\ int)
+numComments=5
