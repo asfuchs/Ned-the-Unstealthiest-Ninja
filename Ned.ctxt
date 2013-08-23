@@ -14,4 +14,6 @@ comment5.target=void\ act()
 comment5.text=\n\ Act\ -\ do\ whatever\ the\ Ned\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment6.params=
 comment6.target=void\ reset()
-numComments=7
+comment7.params=
+comment7.target=void\ kill()
+numComments=8

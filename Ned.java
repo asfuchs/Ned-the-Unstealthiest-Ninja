@@ -14,6 +14,7 @@ public class Ned extends PhysicsActor
     private int absoluteScroll, initialXPosition, initialYPosition;
     private boolean punching;
     private GreenfootImage ninjaPunch;
+    private GreenfootSound walkSound, powSound;
     private boolean resetting;
     
     public Ned()
@@ -22,6 +23,10 @@ public class Ned extends PhysicsActor
         absoluteScroll = 0;
         punching = false;
         ninjaPunch = new GreenfootImage("ninjapow.png");
+        walkSound = new GreenfootSound("sounds/shuffle.wav");
+        powSound = new GreenfootSound("sounds/pow.wav");
+        walkSound.setVolume(95);
+        powSound.setVolume(95);
         resetting = false;
     }
     
@@ -79,6 +84,7 @@ public class Ned extends PhysicsActor
                 punching = true;
                 useSpecialImage(ninjaPunch);
                 getWorld().addObject(new SpeechBubble("pow-bubble.png", this, 0.3), -200, -200);
+                powSound.play();
             }
         }
         else
@@ -111,6 +117,26 @@ public class Ned extends PhysicsActor
             }
             
             punching = false;
+        }
+        
+        if(!isAnimating() && punching && onGround)
+        {
+            velocity.x = 0.0f;
+        }
+        
+        if(isAnimating())
+        {
+            if(!walkSound.isPlaying())
+            {
+                walkSound.playLoop();
+            }
+        }
+        else
+        {
+            if(walkSound.isPlaying())
+            {
+                walkSound.stop();
+            }
         }
         
         NinjaWorld world = ((NinjaWorld)getWorld());
@@ -157,6 +183,11 @@ public class Ned extends PhysicsActor
     public void reset()
     {
         resetting = true;
+    }
+    
+    public void kill()
+    {
+        walkSound.stop();
     }
     
 }

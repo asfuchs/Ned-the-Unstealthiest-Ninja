@@ -16,8 +16,7 @@ public class Chameleon extends ScrollingActor
 
     public void act() 
     {
-        getWorld().addObject(new SpeechBubble("jump-bubble.png", this, 5));
-
+        
         animate();
         
         super.act();

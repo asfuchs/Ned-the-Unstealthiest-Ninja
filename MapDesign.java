@@ -64,7 +64,7 @@ public class MapDesign extends Actor
         Scanner sc = null;
         
         try {
-            sc = new Scanner(new FileInputStream(filename));
+            sc = new Scanner(getClass().getResourceAsStream(filename));
             sc.useDelimiter(",");
             while (sc.hasNext()) {
                 className = sc.next();
@@ -87,8 +87,6 @@ public class MapDesign extends Actor
                     world.addObject(f, sc.nextInt(), sc.nextInt());
                 }
             }
-        } catch (IOException e) {
-            System.out.println("Could not read file in");
         } finally {
             if (sc != null) {
                 sc.close();

@@ -13,6 +13,8 @@ public class NinjaWorld extends World
     private int cameraOffsetX, cameraOffsetY;
     private int worldX, worldY, worldWidth, worldHeight;
     
+    private static final GreenfootSound music = new GreenfootSound("tsuruga.mp3");
+    
     /**
      * Constructor for objects of class NinjaWorld.
      * 
@@ -25,6 +27,15 @@ public class NinjaWorld extends World
         addActors();
         worldWidth = getWidth();
         worldHeight = getHeight();
+    }
+    
+    @Override
+    public void act()
+    {
+        if(!music.isPlaying())
+        {
+            music.playLoop();
+        }
     }
     
     public ArrayList<CollisionActor> getCollisionActors()
@@ -98,6 +109,7 @@ public class NinjaWorld extends World
         addObject(forest, 300, 300);
         addObject(ned, 160, 200);
         addObject(chammy, 200, 180);
+
 
         Finish f = new Finish();
         addObject(f, 1050, 195);

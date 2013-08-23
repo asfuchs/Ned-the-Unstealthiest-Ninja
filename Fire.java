@@ -27,12 +27,11 @@ public class Fire extends ScrollingActor
         Ned n = (Ned)getOneIntersectingObject(Ned.class); 
         if (n!=null)
         {
-                //getWorld().addObject(new SpeechBubble("fire-bubble.png", n, .5), -500, -500); 
-               // n.reset();
+               n.kill();
                NinjaWorld w = new NinjaWorld();
                Greenfoot.setWorld(w);
                w.addObject(new SpeechBubble("fail-bubble.png", n, 1000), 250, 250);
-                return;
+               return;
         }
     }
 }
